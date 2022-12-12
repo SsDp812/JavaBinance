@@ -3,6 +3,9 @@ package com.sguProject.backendExchange.services;
 import com.sguProject.backendExchange.models.Coin;
 import com.sguProject.backendExchange.models.Coin.CoinType;
 import com.sguProject.backendExchange.models.Transaction;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -41,7 +44,8 @@ public class BalanceLogic {
     }
 
     public double getCourse(CoinType buyable, CoinType salable) {
-        /*try {
+        double course = 0;
+        try {
             URL url = new URL("http://localhost:3000/prices?symbol="+ buyable.name() + salable.name() + "&time=5m&count=1");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
@@ -49,15 +53,15 @@ public class BalanceLogic {
             try (var in = new BufferedReader(
                     new InputStreamReader(connection.getInputStream())))
             {
-                String line;
-                while ((line = in.readLine()) != null) {
-                    System.out.println(line);
-                }
+                String jsonString = in.readLine();
+                JSONArray array = (JSONArray) new JSONParser().parse(jsonString);
+                JSONObject jo = (JSONObject) array.get(0);
+                course = (Double) jo.get("open");
             }
         }
         catch (Exception e) {
             e.printStackTrace();
-        }*/
-        return 0.00765;
+        }
+        return course;
     }
 }
