@@ -58,4 +58,9 @@ public class Coin {
 
         balance -= numberOfCoins;
     }
+
+    @Override
+    public String toString() {
+        return type.name() + " " + balance;
+    }
 }
