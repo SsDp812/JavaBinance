@@ -36,7 +36,7 @@ public class BalanceLogic {
 
     public double getCourse(CoinType buyable, CoinType salable) {
         try {
-            URL url = new URL("https://localhost:3000/prices");
+            URL url = new URL("http://localhost:3000/prices?symbol="+ buyable.name() + salable.name() + "&time=5m&count=1");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
 
