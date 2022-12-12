@@ -1,0 +1,86 @@
+*{
+    margin: 0,0,0,0;
+    padding: 0,0,0,0;
+}
+body{
+    margin: 0,0,0,0;
+    padding: 0,0,0,0;
+}
+.MainBox{
+    margin: 0;
+    padding: 0;
+    background-color: #1a222c;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+}
+
+
+.inWindow{
+    display: flex;
+    flex-flow: column wrap;
+    background-color: #24303e;
+    width: 40vw;
+    height: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -20vh 0 0 -20vw;
+    border-radius: 15px;
+}
+
+.formElement{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 24px;
+    margin-top: 15px;
+    color: #56a7fc;
+    
+}
+
+.subBt{
+    width: 120px;
+    height: 36px;
+    background-color: #1a222c;
+}
+
+.subBt:hover{
+    color: #1a222c;
+    background-color: #56a7fc;
+}
+
+.headerDiv{
+    color: #FFCE85;
+    display: flex;
+    background-color:#24303e;
+}
+.sec{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+}
+.aSec{
+    text-decoration: none;
+    color:#56a7fc;
+}
+.aSec:hover{
+    color:white;
+}
